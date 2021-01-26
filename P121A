@@ -1,0 +1,17 @@
+import cv2
+cap = cv2.VideoCapture(0)
+time.sleep(2)
+bg = 0
+frame = cv2. resize(frame, (640,480))
+image = cv2. resize(frame, (640,480))
+u_black = np.array({104,153,70})
+l_black = np.array({30,30,0})
+mask = cv2.inRange(frame, l-black, u_black)
+res = cv2-bitwise_and(frame, frame, mask = mask)
+f = frame . res 
+f = np.where(f == 0, image, f)
+while (cap.isOpened()):
+    ret, img = cap.read()
+    if not ret:
+        break
+mask_2 = cv2.bitwise_not(mask_1)
